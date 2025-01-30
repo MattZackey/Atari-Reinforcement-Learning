@@ -5,15 +5,15 @@ games:
     initial_exploration: 1.0
     final_exploration: 0.1
     final_exploration_frame: 1000000
-    size_memory: 1000
+    size_memory: 1000000
     batch_size: 32
     gamma: 0.99
     tau: 0.005
     learning_rate: 0.0001
-    num_episodes: 100
+    num_episodes: 1000000
     new_agent: True
-    agent_load_path: "results/BreakoutDeterministic-v4/agent/agent_episode_0.pkl"
-    game_info_load_path: "results/BreakoutDeterministic-v4/game/game_info_0.pkl"
-    save_frequency: 50
-    record_frequency: 50
+    agent_load_path: " "
+    game_info_load_path: " "
+    save_frequency: 500
+    record_frequency: 500
     update_freq_target: 10000
