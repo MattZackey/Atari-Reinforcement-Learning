@@ -1,11 +1,7 @@
 # Deep Q-Learning
 
 ## Overview
-This repository implements the Deep Q-Network (DQN) algorithm applied to the Atari  environment. Currently, the results for Breakout are available, but additional games will be added soon. The project aims to replicate some of the success achieved by DeepMind in their paper, "Playing Atari with Deep Reinforcement Learning," which is widely regarded as sparking the modern reinforcement learning (RL) revolution.
-
-In their work, DeepMind demonstrated that DQN could learn effective policies directly from raw pixel inputs and achieve human-level performance on a variety of Atari games. The paper showed that reinforcement learning could scale to complex, high-dimensional environments, where traditional methods struggled. 
-
-This repository serves as an exploration of this breakthrough, using the Atari environment as a benchmark for evaluating the DQN algorithm.
+This repository implements the Deep Q-Network (DQN) algorithm applied to the Atari  environment. Currently, the results for Breakout are available, but additional games will be added soon. The project aims to replicate some of the success achieved by DeepMind in their paper, "Playing Atari with Deep Reinforcement Learning". In their work, they showed DQN could learn successful policies directly from raw pixel inputs and achieve human-level performance on a variety of Atari games. This repository serves as an exploration of this breakthrough.
 
 
 ## Algorithm Details
@@ -57,7 +53,7 @@ During the training process, $\epsilon$ decays to some point. Hence, the agent e
 ### Training
 The Q-network is trained by minimizing the Mean Squared Bellman Error (MSBE)
 
-$$\mathbb{E}_{\{s, a, r, s'\} \sim P}\left[r + \gamma \max_{a'}Q(s', a'; \mathbf{w}^-) - Q(s, a; \mathbf{w})\right]^2,$$
+$$\mathbf{E}_{\{s, a, r, s'\} \sim P}\left[r + \gamma \max_{a'}Q(s', a'; \mathbf{w}^-) - Q(s, a; \mathbf{w})\right]^2,$$
 where $P$ denotes our environment. This expectation unfortunately cannot be computed, because the dynamics of the environment are unknown. As a result, after each step in the environment we take a random sample from the replay buffer to approximate this expectation, and perform one step of gradient descent. 
 
 
