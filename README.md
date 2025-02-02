@@ -29,3 +29,23 @@
 <p align="center">
 <img src="game_results/Breakout/episode_scores_13500.png" width="800"/>
 </p>
+
+
+## Future Work
+
+## References
+
+## Citation
+
+If you find this code helpful, kindly reference the following:
+
+```
+@misc{Zackey2025AtariReinforcementLearning,
+  author = {Zackey, Matthew},
+  title = {Atari-Reinforcement-Learning},
+  year = {2025},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/MattZackey/Atari-Reinforcement-Learning}},
+}
+```

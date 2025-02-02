@@ -10,7 +10,7 @@ games:
     gamma: 0.99
     tau: 0.005
     learning_rate: 0.0001
-    num_episodes: 1000000
+    num_episodes: 15000
     new_agent: True
     agent_load_path: " "
     game_info_load_path: " "

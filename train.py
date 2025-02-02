@@ -9,7 +9,7 @@ from training import train_agent
 from envs import setup_atari_env
 from utils import load_agent, setup_logger, load_config   
 
-def main(config, game_name):
+def train(config, game_name):
     
     if game_name not in config["games"]:
         logging.error(f"Game '{game_name}' not found in the configuration.")
@@ -83,7 +83,7 @@ def main(config, game_name):
     logger.info("Training completed.")
 
 if __name__ == "__main__":
-    # Argument parser for dynamic game selection
+   
     parser = argparse.ArgumentParser(description="Train a DQN agent on Atari games.")
     parser.add_argument(
         "--game",
@@ -92,18 +92,14 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    # Load configuration from the current directory
     config = load_config('config.yaml')
 
-    # Initialize logger
     setup_logger("results/training.log")
     logger = logging.getLogger(__name__)
 
-    # Set random seeds for reproducibility
     seed_value = config["games"][args.game]["seed_value"]
     torch.manual_seed(seed_value)
     np.random.seed(seed_value)
     random.seed(seed_value)
 
-    # Run the main function with the selected game
-    main(config, args.game)
+    train(config, args.game)

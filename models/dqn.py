@@ -57,29 +57,3 @@ class DQN(nn.Module):
         if use_activation:
             layers.append(nn.ReLU())
         return layers
-
-# class DQN(nn.Module):
-#   def __init__(self, n_frames, n_actions):
-#     super(DQN, self).__init__()
-#     self.conv1 = nn.Conv2d(in_channels = n_frames, out_channels = 32, kernel_size = 8, stride = 4)
-#     self.conv2 = nn.Conv2d(in_channels = 32, out_channels = 64, kernel_size = 4, stride = 2)
-#     self.conv3 = nn.Conv2d(in_channels = 64, out_channels = 64, kernel_size = 3, stride = 1)
-#     self.fc1 = nn.Linear(in_features = 64 * 7 * 7, out_features = 512, bias = False)
-#     self.fc1_norm = nn.BatchNorm1d(512, momentum=0.05)
-#     self.fc2 = nn.Linear(in_features = 512, out_features = n_actions)
-    
-#     self.intial_parameters()
-
-#   def forward(self, x):
-#     x = F.gelu(self.conv1(x))
-#     x = F.gelu(self.conv2(x))
-#     x = F.gelu(self.conv3(x))
-#     x = x.view(-1, 64 * 7 * 7)
-#     x = F.gelu(self.fc1_norm(self.fc1(x)))
-#     x = self.fc2(x)
-#     return x
-  
-#   def intial_parameters(self):
-#     # Initial outputs for the policy and value are near zero
-#     nn.init.uniform_(self.fc2.weight, a = -3e-03, b = 3e-03)
-#     nn.init.uniform_(self.fc2.bias, a = -3e-04, b = 3e-04)
