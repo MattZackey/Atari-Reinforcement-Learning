@@ -31,9 +31,9 @@ To improve training stability, Deep Q-learning uses an experience replay buffer.
 ## Fixed Q-targets
 
 To further stabilize the learning process, Deep Q-Learning makes use of a target network, which is a copy of the Q-network. The target network is responsible for calculating the Bellman targets
-\begin{equation}
-    y = r + \max_{a'}Q(s', a'; \mathbf{w}^-)
-\end{equation}
+
+$$ y = r + \max_{a'}Q(s', a'; \mathbf{w}^-) $$
+
 where $w^-$ denote the parameters of the target network. These parameters are only updated periodically as copies of the Q-networks parameters.
 
 ## Off-Policy
@@ -49,7 +49,7 @@ During the training process, $\epsilon$ decays to some point. Hence, the agent e
 ## Training
 The Q-network is trained by minimizing the Mean Squared Bellman Error (MSBE)
 
-## \mathbb{E}_{\{s, a, r, s'\} \sim P}\left[r + \gamma \max_{a'}Q(s', a'; \mathbf{w}^-) - Q(s, a; \mathbf{w})\right]^2 ##
+$$ \mathbb{E}_{\{s, a, r, s'\} \sim P}\left[r + \gamma \max_{a'}Q(s', a'; \mathbf{w}^-) - Q(s, a; \mathbf{w})\right]^2, $$
 where $P$ denotes our environment. This expectation unfortunately cannot be computed, because the dynamics of the environment are unknown. As a result, after each step in the environment we take a random sample from the replay buffer to approximate this expectation, and perform one step of gradient descent. 
 
 
