@@ -54,6 +54,7 @@ During the training process, $\epsilon$ decays to some point. Hence, the agent e
 The Q-network is trained by minimizing the Mean Squared Bellman Error (MSBE)
 
 $$E_{\{s, a, r, s'\} \sim P}\left[r + \gamma \max_{a'}Q(s', a'; \mathbf{w}^-) - Q(s, a; \mathbf{w})\right]^2$$
+
 where $P$ denotes our environment. This expectation unfortunately cannot be computed, because the dynamics of the environment are unknown. As a result, after each step in the environment we take a random sample from the replay buffer to approximate this expectation, and perform one step of gradient descent. 
 
 
