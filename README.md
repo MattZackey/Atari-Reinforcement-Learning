@@ -2,8 +2,8 @@
 
 ## Overview
 This repository implements the Deep Q-Network (DQN) algorithm applied to the Atari  environment. Currently, the results for Breakout are available, but additional games will be added soon. The project aims to replicate some of the success achieved by DeepMind in their paper, "Playing Atari with Deep Reinforcement Learning," which is widely regarded as sparking the modern reinforcement learning (RL) revolution.
-In their work, DeepMind demonstrated that DQN could learn effective policies directly from raw pixel inputs and achieve human-level performance on a variety of Atari games. The paper showed that reinforcement learning could scale to complex, high-dimensional environments, where traditional methods struggled.
-This repository serves as an exploration of this breakthrough, using the Atari environment as a benchmark for evaluating the DQN algorithm.
+
+In their work, DeepMind demonstrated that DQN could learn effective policies directly from raw pixel inputs and achieve human-level performance on a variety of Atari games. The paper showed that reinforcement learning could scale to complex, high-dimensional environments, where traditional methods struggled. This repository serves as an exploration of this breakthrough, using the Atari environment as a benchmark for evaluating the DQN algorithm.
 
 
 ## Algorithm Details
@@ -15,14 +15,13 @@ Suppose our estimate is defined as $Q(s,a)$ (also referred to as the Q-function)
 $$\delta = r + \gamma \max_{a'}Q(s', a') - Q(s, a)$$
 
 where $\gamma$ is the discount factor. The Bellman error tell us the difference between: 
-\begin{itemize}
-    \item The current Q-value estimate $Q(s, a)$
-    \item The new estimate with the immediate reward and discounted future rewards from the next state. This estimate is often referred to as our Bellman targets
-\end{itemize}
+*The current Q-value estimate $Q(s, a)$
+*The new estimate with the immediate reward and discounted future rewards from the next state. This estimate is often referred to as our Bellman targets
 
 We update our Q-function as
 
-$$ Q(s,a) \leftarrow Q(s,a) + \alpha \delta $$
+$$Q(s,a) \leftarrow Q(s,a) + \alpha \delta$$
+
 where $\alpha$ is the learning rate.
 
 ### Deep Q-learning
