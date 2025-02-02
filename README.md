@@ -1,3 +1,20 @@
+## subsection{Q-Learning}
+Q-learning is a mode-free RL algorithm, where we aim to approximate the optimal action value function $Q^*(s,a)$, which is the expected return for taking action $a$ in state $s$, and thereafter following the optimal policy. 
+
+Suppose our estimate is defined as $Q(s,a)$ (also referred to as the Q-function). After taking an action and observing the next state $s'$, we calculate the Bellman error as
+'''latex
+$$
+\begin{equation}
+    \delta = r + \gamma \max_{a'}Q(s', a') - Q(s, a)
+\end{equation}
+$$
+where $\gamma$ is the discount factor. The Bellman error tell us the difference between: 
+\begin{itemize}
+    \item The current Q-value estimate $Q(s, a)$
+    \item The new estimate with the immediate reward and discounted future rewards from the next state. This estimate is often referred to as our Bellman targets
+\end{itemize}
+
+
 ## Breakout
 
 <div style="display: flex;">
