@@ -4,9 +4,7 @@ Q-learning is a mode-free RL algorithm, where we aim to approximate the optimal 
 Suppose our estimate is defined as $Q(s,a)$ (also referred to as the Q-function). After taking an action and observing the next state $s'$, we calculate the Bellman error as
 '''latex
 $$
-\begin{equation}
     \delta = r + \gamma \max_{a'}Q(s', a') - Q(s, a)
-\end{equation}
 $$
 where $\gamma$ is the discount factor. The Bellman error tell us the difference between: 
 \begin{itemize}
