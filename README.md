@@ -94,8 +94,12 @@ where $P$ denotes our environment. This expectation unfortunately cannot be comp
 ## Setup Instructions
 So it's possible to achieve the same performance as DeepMind in Atari! Now you can try too by following these steps:
 
-  1. git clone
-  2. 
+  1. git clone `https://github.com/MattZackey/Atari-Reinforcement-Learning.git`
+  2. cd into `path_to_project'
+  3. Create a Conda environment `conda create --name atari-rl python=3.10` and active environment conda activate atari-rl
+  4. Install required dependencies `pip install requirements.txt`
+  5. Run the training script `python train.py`
+
 ## Future Work
 
 ## References
