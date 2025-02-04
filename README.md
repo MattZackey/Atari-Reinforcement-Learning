@@ -92,7 +92,7 @@ where $P$ denotes our environment. This expectation unfortunately cannot be comp
 </p>
 
 ## Setup Instructions
-So it's possible to achieve the same performance as DeepMind in Atari! Now you can try too by following these steps:
+So it's possible to achieve the same performance as DeepMind in Atari! If you want, you can also try:
 
   1. git clone `https://github.com/MattZackey/Atari-Reinforcement-Learning.git`
   2. cd into `path_to_project'
