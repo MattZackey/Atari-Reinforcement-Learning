@@ -91,7 +91,11 @@ where $P$ denotes our environment. This expectation unfortunately cannot be comp
 <img src="game_results/Breakout/episode_scores_13500.png" width="800"/>
 </p>
 
+## Setup Instructions
+So it's possible to achieve the same performance as DeepMind in Atari! Now you can try too by following these steps:
 
+  1. git clone
+  2. 
 ## Future Work
 
 ## References
