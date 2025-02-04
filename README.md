@@ -97,8 +97,8 @@ So it's possible to achieve the same performance as DeepMind in Atari! If you wa
   1. git clone `https://github.com/MattZackey/Atari-Reinforcement-Learning.git`
   2. Open Anaconda/Miniconda and navigate to `path_to_project`
   4. Create a Conda environment `conda create --name atari-rl python=3.10` and active environment `conda activate atari-rl`
-  5. Install required dependencies `pip install requirements.txt`
-  6. Run the training script `python train.py`
+  5. Install required dependencies `pip install -r requirements.txt`
+  6. Run the training script `python train.py --game BreakoutDeterministic-v4`
 
 ## Future Work
 
