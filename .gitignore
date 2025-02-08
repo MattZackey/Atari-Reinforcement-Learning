@@ -1,3 +1,16 @@
-results
-runs
-training.log
+# gameplay/*
+# !gameplay/
+#!results/BreakoutDeterminstic-v4/gameplay/           # Keep the folder
+#!results/BreakoutDeterminstic-v4/gameplay/agent_5000.gif   # Keep the specific file
+
+
+results/BreakoutDeterministic-v4/agent/*
+results/BreakoutDeterministic-v4/game/*
+results/BreakoutDeterministic-v4/gameplay/*
+results/BreakoutDeterministic-v4/plots/*
+!results/BreakoutDeterministic-v4/gameplay/agent_5000.gif
+!results/BreakoutDeterministic-v4/gameplay/agent_10000.gif
+!results/BreakoutDeterministic-v4/gameplay/agent_13500.gif
+!results/BreakoutDeterministic-v4/plots/episode_scores_13500.png
+
+results/training.log
