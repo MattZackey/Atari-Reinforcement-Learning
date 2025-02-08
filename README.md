@@ -107,7 +107,7 @@ So it's possible to achieve the same performance as DeepMind in Atari! If you wa
 
 ## Citation
 
-If you find this code helpful, kindly reference the following:
+If you find this code helpful, kindly reference:
 
 ```
 @misc{Zackey2025AtariReinforcementLearning,
