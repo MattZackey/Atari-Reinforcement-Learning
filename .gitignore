@@ -8,6 +8,8 @@ results/BreakoutDeterministic-v4/agent/*
 results/BreakoutDeterministic-v4/game/*
 results/BreakoutDeterministic-v4/gameplay/*
 results/BreakoutDeterministic-v4/plots/*
+!results/BreakoutDeterministic-v4/agent/
+!results/BreakoutDeterministic-v4/game/
 !results/BreakoutDeterministic-v4/gameplay/agent_5000.gif
 !results/BreakoutDeterministic-v4/gameplay/agent_10000.gif
 !results/BreakoutDeterministic-v4/gameplay/agent_13500.gif
