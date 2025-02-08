@@ -6,17 +6,17 @@ This repository implements the Deep Q-Network (DQN) algorithm applied to the Ata
 ## Breakout
 
 The trained DQN agent achieves a total score of 343. Although, this is not a perfect score, it still highlights a high-level of competence in the game. Notably, the agent has learned that creating a tunnel along both sides is the most efficient strategy for breaking as many bricks as possible. With this strategy, the agent decreases the number of times it must hit the ball, while maximising the number of collisions. Similarly, DeepMind found the same relationship in their training. Highlighting, that such a strategy emerges naturally in a sufficiently trained agent.
-
+<br>
 <p align="center">
   <img src="game_results/Breakout/agent_13500.gif" width="400">
 </p>
-
+<br>
 The total reward the agent achieved for each espisode of training.
-
+<br>
 <p align="center">
 <img src="game_results/Breakout/episode_scores_13500.png" width="800"/>
 </p>
-
+<br>
 ## Algorithm Details
 ### Q-Learning
 Q-learning is a mode-free RL algorithm, where we aim to approximate the optimal action value function $Q^*(s,a)$, which is the expected return for taking action $a$ in state $s$, and thereafter following the optimal policy. 
