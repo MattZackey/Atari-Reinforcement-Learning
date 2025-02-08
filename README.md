@@ -75,6 +75,8 @@ where $P$ denotes our environment. This expectation unfortunately cannot be comp
 
 ## Atari and Agent Details
 
+### States
+In the environment setup, a state is represented by four consecutive frames.  This allows the agent to determine the motion dynamics of the environment.
 
 ### Circular Replay Buffer 
 The fully trained DQN agent is just under 7 GB of memory, which is achieved by saving individual frames rather than states. These frames are stored in what is known as a circular replay buffer, which is a data structure that continuously overwrites the oldest entries. This circular replay buffer has been reproduced from scratch.
