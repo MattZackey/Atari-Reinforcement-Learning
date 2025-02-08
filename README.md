@@ -19,17 +19,6 @@ The total reward the agent achieved for each espisode of training.
 </p>
 <br>
 
-## Circular Replay Buffer 
-The fully trained DQN agent is just under 7 GB of memory, which is achieved by saving individual frames rather than states. These frames are stored in what is known as a circular replay buffer, which is a data structure that continuously overwrites the oldest entries. This circular replay buffer has been reproduced from scratch.
-
-How it works:
- * Circular Replay Buffer Structure: The replay buffer consist of a pointer that indicates where the latest frame should be inserted. When the buffer is full, the pointer loops back to the start, replacing the oldest frame with the new one.
- * Stored Information: For every saved frame, the corresponding action taken, reward received, and a done flag (indicating whether the game has ended) are also stored. This ensures that each frame is accompanied by all the necessary data to reconstruct a full experience.
- * Creating the transition: The transitions tuples $$(s, a, r, s’)$$ are created when sampling from the replay buffer. That is, we sample a random batch of indices from the buffer. Suppose one of those indices is i, which corresponds to selecting frame fi, action ai and reward ri. The transition is built:
-      ** s = [fi-4, fi-3, fi-2, fi-1], a = ai, r = ri, s = [fi-3, fi-2, fi-1, fi]).
- * Initial Population of the Buffer: The replay buffer is designed in such a way that it must be full before sampling from it. Therefore, before training begins, the replay buffer is populated with experience from an agent taking random actions.
-
-
 ## Algorithm Details
 
 ### Q-Learning
@@ -37,7 +26,7 @@ Q-learning is a mode-free RL algorithm, where we aim to approximate the optimal 
 
 Suppose our estimate is defined as $Q(s,a)$ (also referred to as the Q-function). After taking an action and observing the next state $s'$, we calculate the Bellman error as
 
-$$\delta = r + \gamma \max_{a'}Q(s', a') - Q(s, a)$$
+$$\delta = r + \gamma \max_{a′}Q(s′, a′) - Q(s, a)$$
 
 where $\gamma$ is the discount factor. The Bellman error tell us the difference between: 
 * The current Q-value estimate $Q(s, a)$
@@ -59,13 +48,13 @@ where $\textbf{w}$ are the parameters. This allows us to generalise from seen st
 
 ### Experience Replay
 
-To improve training stability, Deep Q-learning uses an experience replay buffer. The agent stores its experiences in a buffer, which consists of tuples of the form $\{s, a, r, s'\}$. During training a random batch is sampled from the replay buffer, and the parameters of the Q-network are updated. By selecting random samples from our replay buffer, we break the correlation between consecutive samples, stabilizing training.
+To improve training stability, Deep Q-learning uses an experience replay buffer. The agent stores its experiences in a buffer, which consists of tuples of the form $\{s, a, r, s′\}$. During training a random batch is sampled from the replay buffer, and the parameters of the Q-network are updated. By selecting random samples from our replay buffer, we break the correlation between consecutive samples, stabilizing training.
 
 ### Fixed Q-targets
 
 To further stabilize the learning process, Deep Q-Learning makes use of a target network, which is a copy of the Q-network. The target network is responsible for calculating the Bellman targets
 
-$$y = r + \max_{a'}Q(s', a'; \mathbf{w}^-)$$
+$$y = r + \max_{a′}Q(s′, a′; \mathbf{w}^-)$$
 
 where $w^-$ denote the parameters of the target network. These parameters are only updated periodically as copies of the Q-networks parameters.
 
@@ -80,9 +69,23 @@ During the training process, $\epsilon$ decays to some point. Hence, the agent e
 ### Training
 The Q-network is trained by minimizing the Mean Squared Bellman Error (MSBE)
 
-$$E_{\{s, a, r, s'\} \sim P}\left[r + \gamma \max_{a'}Q(s', a'; \mathbf{w}^-) - Q(s, a; \mathbf{w})\right]^2$$
+$$E_{\{s, a, r, s′\} \sim P}\left[r + \gamma \max_{a′}Q(s', a′; \mathbf{w}^-) - Q(s, a; \mathbf{w})\right]^2$$
 
 where $P$ denotes our environment. This expectation unfortunately cannot be computed, because the dynamics of the environment are unknown. As a result, after each step in the environment we take a random sample from the replay buffer to approximate this expectation, and perform one step of gradient descent. 
+
+### Circular Replay Buffer 
+The fully trained DQN agent is just under 7 GB of memory, which is achieved by saving individual frames rather than states. These frames are stored in what is known as a circular replay buffer, which is a data structure that continuously overwrites the oldest entries. This circular replay buffer has been reproduced from scratch.
+
+How it works:
+ * Circular Replay Buffer Structure: The replay buffer consist of a pointer that indicates where the latest frame should be inserted. When the buffer is full, the pointer loops back to the start, replacing the oldest frame with the new one.
+ * Stored Information: For every saved frame, the corresponding action taken, reward received, and a done flag (indicating whether the game has ended) are also stored. This ensures that each frame is accompanied by all the necessary data to reconstruct a full experience.
+ * Creating the transition: The transitions tuples $$(s, a, r, s’)$$ are created when sampling from the replay buffer. That is, we sample a random batch of indices from the buffer. Suppose one of those indices is i, which corresponds to selecting frame fi, action ai and reward ri. The transition is built:
+      * $$s = [f_{i-4}, f_{i-3}, f_{i-2}, f_{i-1}]$$
+      * $$a = a_i$$
+      * $$r = r_i$$
+      * $$s′ = [f_{i-3}, f_{i-2}, f_{i-1}, f_i]$$
+ * Initial Population of the Buffer: The replay buffer is designed in such a way that it must be full before sampling from it. Therefore, before training begins, the replay buffer is populated with experience from an agent taking random actions.
+
 
 ## Setup Instructions
 So it's possible to achieve the same performance as DeepMind in Atari! If you want, you can also try:
@@ -93,8 +96,6 @@ So it's possible to achieve the same performance as DeepMind in Atari! If you wa
   5. Install required dependencies `pip install -r requirements.txt`
   6. For Windows user you are also required to install `pip install gym[atari]`
   7. Run the training script `python train.py --game BreakoutDeterministic-v4`
-
-## Future Work
 
 ## References
 
