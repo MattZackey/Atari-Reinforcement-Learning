@@ -24,7 +24,7 @@ The total reward the agent achieved for each espisode of training.
 ### Q-Learning
 Q-learning is a mode-free RL algorithm, where we aim to approximate the optimal action value function $Q^*(s,a)$, which is the expected return for taking action $a$ in state $s$, and thereafter following the optimal policy. 
 
-Suppose our estimate is defined as $Q(s,a)$ (also referred to as the Q-function). After taking an action and observing the next state $s'$, we calculate the Bellman error as
+Suppose our estimate is defined as $Q(s,a)$ (also referred to as the Q-function). After taking an action and observing the next state $s′$, we calculate the Bellman error as
 
 $$\delta = r + \gamma \max_{a′}Q(s′, a′) - Q(s, a)$$
 
@@ -48,7 +48,7 @@ where $\textbf{w}$ are the parameters. This allows us to generalise from seen st
 
 ### Experience Replay
 
-To improve training stability, Deep Q-learning uses an experience replay buffer. The agent stores its experiences in a buffer, which consists of tuples of the form $\{s, a, r, s′\}$. During training a random batch is sampled from the replay buffer, and the parameters of the Q-network are updated. By selecting random samples from our replay buffer, we break the correlation between consecutive samples, stabilizing training.
+To improve training stability, Deep Q-learning uses an experience replay buffer. The agent stores its experiences in a buffer, which consists of tuples of the form $(s, a, r, s′)$. During training a random batch is sampled from the replay buffer, and the parameters of the Q-network are updated. By selecting random samples from our replay buffer, we break the correlation between consecutive samples, stabilizing training.
 
 ### Fixed Q-targets
 
