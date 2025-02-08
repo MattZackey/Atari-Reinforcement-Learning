@@ -18,7 +18,9 @@ The total reward the agent achieved for each espisode of training.
 <img src="game_results/Breakout/episode_scores_13500.png" width="800"/>
 </p>
 <br>
+
 ## Algorithm Details
+
 ### Q-Learning
 Q-learning is a mode-free RL algorithm, where we aim to approximate the optimal action value function $Q^*(s,a)$, which is the expected return for taking action $a$ in state $s$, and thereafter following the optimal policy. 
 
