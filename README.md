@@ -65,12 +65,13 @@ The trained DQN agent achieves a total score of 343. Although, this is not a per
 
 <div style="display: flex;">
 
-  <div style="flex: 1; text-align: center;">
+  <div style="flex: 1; center;">
     <h3>Episode 13500</h3>
     <div style="border: 1px solid black; padding: 5px; display: inline-block">
       <img src="game_results/Breakout/agent_13500.gif" alt="Image 1" style="max-width: 70%; width: 400px;">
     </div>
   </div>
+
 
 The following figure shows the total reward the agent achieved for each espisode of training.
 
