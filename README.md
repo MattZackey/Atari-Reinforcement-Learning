@@ -104,6 +104,10 @@ So it's possible to achieve the same performance as DeepMind in Atari! If you wa
 
 ## References
 
+* Mnih, V., Kavukcuoglu, K., Silver, D., Rusu, A.A., Veness, J., Bellemare, M.G., Graves, A., Riedmiller, M., Fidjeland, A.K., Ostrovski, G. and Petersen, S., 2015. Human-level control through deep reinforcement learning. nature, 518(7540), pp.529-533.
+
+* Gordić, A. (2021). *pytorch-learn-reinforcement-learning* [GitHub repository]. GitHub. https://github.com/gordicaleksa/pytorch-learn-reinforcement-learning
+
 ## Citation
 
 If you find this code helpful, kindly reference:
