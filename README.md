@@ -3,6 +3,25 @@
 ## Overview
 This repository implements the Deep Q-Network (DQN) algorithm applied to the Atari  environment. Currently, the results for Breakout are available, but additional games will be added soon. The project aims to replicate some of the success achieved by DeepMind in their paper, "Human-level control through deep reinforcement learning". In their work, they showed DQN could learn successful policies directly from raw pixel inputs and achieve human-level performance on a variety of Atari games. This repository serves as an exploration of this breakthrough.
 
+## Breakout
+
+The trained DQN agent achieves a total score of 343. Although, this is not a perfect score, it still highlights a high-level of competence in the game. Notably, the agent has learned that creating a tunnel along both sides is the most efficient strategy for breaking as many bricks as possible. With this strategy, the agent decreases the number of times it must hit the ball, while maximising the number of collisions. Similarly, DeepMind found the same relationship in their training. Highlighting, that such a strategy emerges naturally in a sufficiently trained agent.
+
+<div style="display: flex; justify-content: center; align-items: center; text-align: center;">
+  <div>
+    <h3>Episode 13500</h3>
+    <div style="border: 1px solid black; padding: 5px; display: inline-block">
+      <img src="game_results/Breakout/agent_13500.gif" alt="Image 1" style="max-width: 70%; width: 400px;">
+    </div>
+  </div>
+</div>
+
+
+The total reward the agent achieved for each espisode of training.
+
+<p align="center">
+<img src="game_results/Breakout/episode_scores_13500.png" width="800"/>
+</p>
 
 ## Algorithm Details
 ### Q-Learning
@@ -56,28 +75,6 @@ The Q-network is trained by minimizing the Mean Squared Bellman Error (MSBE)
 $$E_{\{s, a, r, s'\} \sim P}\left[r + \gamma \max_{a'}Q(s', a'; \mathbf{w}^-) - Q(s, a; \mathbf{w})\right]^2$$
 
 where $P$ denotes our environment. This expectation unfortunately cannot be computed, because the dynamics of the environment are unknown. As a result, after each step in the environment we take a random sample from the replay buffer to approximate this expectation, and perform one step of gradient descent. 
-
-
-
-## Breakout
-
-The trained DQN agent achieves a total score of 343. Although, this is not a perfect score, it still highlights a high-level of competence in the game. Notably, the agent has learned that creating a tunnel along both sides is the most efficient strategy for breaking as many bricks as possible. With this strategy, the agent decreases the number of times it must hit the ball, while maximising the number of collisions. Similarly, DeepMind found the same relationship in their training. Highlighting, that such a strategy emerges naturally in a sufficiently trained agent.
-
-<div style="display: flex;">
-
-  <div style="flex: 1; center;">
-    <h3>Episode 13500</h3>
-    <div style="border: 1px solid black; padding: 5px; display: inline-block">
-      <img src="game_results/Breakout/agent_13500.gif" alt="Image 1" style="max-width: 70%; width: 400px;">
-    </div>
-  </div>
-
-
-The following figure shows the total reward the agent achieved for each espisode of training.
-
-<p align="center">
-<img src="game_results/Breakout/episode_scores_13500.png" width="800"/>
-</p>
 
 ## Setup Instructions
 So it's possible to achieve the same performance as DeepMind in Atari! If you want, you can also try:
