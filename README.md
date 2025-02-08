@@ -73,6 +73,9 @@ $$E_{\{s, a, r, s′\} \sim P}\left[r + \gamma \max_{a′}Q(s', a′; \mathbf{w}
 
 where $P$ denotes our environment. This expectation unfortunately cannot be computed, because the dynamics of the environment are unknown. As a result, after each step in the environment we take a random sample from the replay buffer to approximate this expectation, and perform one step of gradient descent. 
 
+## Atari and Agent Details
+
+
 ### Circular Replay Buffer 
 The fully trained DQN agent is just under 7 GB of memory, which is achieved by saving individual frames rather than states. These frames are stored in what is known as a circular replay buffer, which is a data structure that continuously overwrites the oldest entries. This circular replay buffer has been reproduced from scratch.
 
