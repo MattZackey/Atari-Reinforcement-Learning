@@ -1,9 +1,9 @@
-# Deep Q-Learning
+# Deep Q-Learning 🤖 
 
 ## Overview
 This repository implements the Deep Q-Network (DQN) algorithm applied to the Atari  environment. Currently, the results for Breakout are available, but additional games will be added soon. The project aims to replicate some of the success achieved by DeepMind in their paper, "Human-level control through deep reinforcement learning". In their work, they showed DQN could learn successful policies directly from raw pixel inputs and achieve human-level performance on a variety of Atari games. This repository serves as an exploration of this breakthrough.
 
-## Breakout
+## Breakout 
 
 The trained DQN agent achieves a total score of 343. Although, this is not a perfect score, it still highlights a high-level of competence in the game. Notably, the agent has learned that creating a tunnel along both sides is the most efficient strategy for breaking as many bricks as possible. With this strategy, the agent decreases the number of times it must hit the ball, while maximising the number of collisions. Similarly, DeepMind found the same relationship in their training. Highlighting, that such a strategy emerges naturally in a sufficiently trained agent. <br>
 <h3 align="center"><b>Results</b></h3>
