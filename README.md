@@ -101,7 +101,7 @@ So it's possible to achieve the same performance as DeepMind in Atari! If you wa
   4. Create a Conda environment `conda create --name atari-rl python=3.10` and active environment `conda activate atari-rl`
   5. Install required dependencies `pip install -r requirements.txt`
   6. For Windows users you are also required to install `pip install gym[atari]`
-  7. Run the training script `python train.py --game {atari-game-name}`
+  7. Run the training script `python train.py --game "BreakoutDeterministic-v4"`
 
 ## References
 
