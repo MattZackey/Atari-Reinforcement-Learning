@@ -44,7 +44,7 @@ In Q-learning, the action-value function must be estimated across all states and
 
 $$Q(s,a, \textbf{w}) \approx Q(s,a),$$
 
-where $\textbf{w}$ are the parameters. This allows us to generalise from seen states to unseen states. In Deep Q-learning, a neural network is used as the function approximator, and it is typical to refer to it as a Q-network.  
+where $\textbf{w}$ are the parameters. This allows us to generalise from seen to unseen states. In Deep Q-learning, a neural network is used as the function approximator, and it is typical to refer to it as the Q-network.  
 
 ### Experience Replay
 
