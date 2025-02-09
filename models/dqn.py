@@ -3,6 +3,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class DQN(nn.Module):
+    """
+    Q-network
+    """
     
     def __init__(self, n_frames, n_actions, frame_shape):
         super().__init__()

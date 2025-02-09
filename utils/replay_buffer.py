@@ -1,11 +1,15 @@
 import random
 import numpy as np
 
-#Assumptions:
-    # ReplayBuffer is full before sampling.
 class ReplayBuffer:
+    """
+    Circular replay buffer for storing and sampling transitions. 
+    
+    Assumptions:
+        - Replay buffer is full before sampling
+    """
 
-    def __init__(self, size_memory, batch_size, frame_shape, frame_set):
+    def __init__(self, size_memory: int, batch_size: int, frame_shape: int, frame_set: int):
         
         # Create replay buffer
         self.frame_buffer = np.zeros([size_memory] + frame_shape, dtype = np.uint8)

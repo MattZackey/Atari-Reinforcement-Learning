@@ -5,11 +5,13 @@ import torch.optim as optim
 from models import DQN
 from utils import ReplayBuffer
 
- # Todo: add in a method to act without epislon greedy straegy
-
 class AgentDQN:
-    # Requirements: 
-    # - Frames must have same height and width    
+    """
+    DQN agent
+    
+    Requirements:
+        - Frames must have same height and width 
+    """  
 
     def __init__(self, action_dim: int, n_frames: int, frame_height: int, frame_width: int, intial_exploration: float, final_exploration: float, final_exploration_frame: int, size_memory: int, batch_size: int, gamma: float, tau: float, learning_rate: float):
 
