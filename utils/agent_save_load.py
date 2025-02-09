@@ -1,4 +1,5 @@
 import numpy as np
+import os
 import pickle
 import logging
 import matplotlib.pyplot as plt
@@ -10,6 +11,11 @@ def save_agent(agent, game, new_game, episode_score = [], num_frames = 0, num_ep
     """
     Saves agent and its scores
     """
+    
+    # Create directories 
+    if not os.path.exists(f"results/{game}/"):
+        os.makedirs(f"results/{game}/agent/")
+        os.makedirs(f"results/{game}/game/")
     
     # Save agent
     with open(f"results/{game}/agent/agent_episode_{num_episode}.pkl", "wb") as f:
@@ -31,6 +37,10 @@ def save_results(game, episode_score, num_episode):
     """
     Saves graph of agent's performance
     """
+    
+    # Create directory
+    if not os.path.exists(f"results/{game}/plots"):
+        os.makedirs(f"results/{game}/plots/")
             
     # Plot episode scores
     plt.plot(np.arange(len(episode_score)), episode_score, linewidth=0.2)

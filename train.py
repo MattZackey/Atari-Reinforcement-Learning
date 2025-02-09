@@ -18,9 +18,9 @@ def train(config, game_name):
     game_config = config["games"][game_name]
     
     save_frequency = game_config["save_frequency"]
-    # if save_frequency < 500:
-    #     logging.error("Save frequency must be at least 500.")
-    #     sys.exit(1)  
+    if save_frequency < 500:
+        logging.error("Save frequency must be at least 500.")
+        sys.exit(1)  
     
     # Setup environment
     env, action_dim, frame_height, frame_width = setup_atari_env(

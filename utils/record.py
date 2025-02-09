@@ -1,9 +1,14 @@
 import imageio
+import os
     
 def record_agent(agent, env, game, num_episode): 
     """
     Records a test run of the agent in a given environment and saves it as a GIF.
     """
+    
+    # Create directory
+    if not os.path.exists(f"results/{game}/gameplay"):
+        os.makedirs(f"results/{game}/gameplay/")
     
     frames = []
     state, info = env.reset() 

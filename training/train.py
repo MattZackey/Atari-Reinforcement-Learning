@@ -6,7 +6,6 @@ from torch.utils.tensorboard import SummaryWriter
 logger = logging.getLogger(__name__)
 writer = SummaryWriter()
 
-#Todo: setup logger to provide info on training
 def train_agent(agent, env, game_name: str, num_episodes: int, new_agent, episode_score: list, num_frames: int, save_freq: int, record_freq: int, update_freq_target: int, update_freq_policy: int = 4):
     """
     Trains the agent on the environment over a specified number of episodes.
