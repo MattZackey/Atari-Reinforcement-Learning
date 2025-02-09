@@ -30,7 +30,7 @@ $$\delta = r + \gamma \max_{a′}Q(s′, a′) - Q(s, a)$$
 
 where $\gamma$ is the discount factor. The Bellman error tell us the difference between: 
 * The current Q-value estimate $Q(s, a)$
-* The new estimate with the immediate reward and discounted future rewards from the next state. This estimate is often referred to as our Bellman targets
+* The new estimate with the immediate reward $r$ and discounted future rewards from the next state $\gamma \max_{a′}Q(s′, a′)$. This estimate is often referred to as our Bellman targets
 
 We update our Q-function as
 
