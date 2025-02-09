@@ -1,7 +1,7 @@
 # Deep Q-Learning 🤖 
 
 ## Overview
-This repository implements the Deep Q-Network (DQN) algorithm within Atari 2600. Currently, the results for Breakout are available, but additional games will be added soon. The project aims to replicate some of the success achieved by DeepMind in their paper, [Human-level control through deep reinforcement learning]([https://proceedings.mlr.press/v80/fujimoto18a/fujimoto18a.pdf](https://training.incf.org/sites/default/files/2023-05/Human-level%20control%20through%20deep%20reinforcement%20learning.pdf). In their work, DeepMind demonstrated that a DQN agent can learn successful policies directly from raw pixel inputs, achieving human-level performance on a variety of Atari games. This repository serves as an exploration of this breakthrough.
+This repository implements the Deep Q-Network (DQN) algorithm within Atari 2600. Currently, the results for Breakout are available, but additional games will be added soon. The project aims to replicate some of the success achieved by DeepMind in their paper, [Human-level control through deep reinforcement learning](https://proceedings.mlr.press/v80/fujimoto18a/fujimoto18a.pdf](https://training.incf.org/sites/default/files/2023-05/Human-level%20control%20through%20deep%20reinforcement%20learning.pdf). In their work, DeepMind demonstrated that a DQN agent can learn successful policies directly from raw pixel inputs, achieving human-level performance on a variety of Atari games. This repository serves as an exploration of this breakthrough.
 
 ## Breakout 
 
