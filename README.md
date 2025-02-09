@@ -40,7 +40,7 @@ where $\alpha$ is the learning rate.
 
 ### Deep Q-learning
 
-In Q-learning the action-value function must be estimated across all states and actions. However, in many environments, the state space is too large to store a Q-value for every state action pair. As a result, a function approximator is used 
+In Q-learning, the action-value function must be estimated across all states and actions. However, in many environments, the state space is too large to store a Q-value for every state action pair. As a result, a function approximator is used 
 
 $$Q(s,a, \textbf{w}) \approx Q(s,a),$$
 
