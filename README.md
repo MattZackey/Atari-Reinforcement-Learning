@@ -9,13 +9,13 @@ The trained DQN agent achieves a total score of 343. Although, this is not a per
 <h3 align="center"><b>Results</b></h3>
 
 <p align="center">
-  <img src="game_results/Breakout/agent_13500.gif" width="400">
+  <img src="results/BreakoutDeterministic-v4/gameplay/agent_13500.gif" width="400">
 </p>
 <br>
 The total reward the agent achieved for each espisode of training.
 <br>
 <p align="center">
-<img src="game_results/Breakout/episode_scores_13500.png" width="800"/>
+<img src="results/BreakoutDeterministic-v4/plots/episode_scores_13500.png" width="800"/>
 </p>
 <br>
 
