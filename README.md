@@ -83,7 +83,7 @@ In the environment setup, a state is represented by four consecutive frames.  Th
 The fully trained DQN agent is just under 7 GB of memory, which is achieved by saving individual frames rather than states. These frames are stored in what is known as a circular replay buffer, which is a data structure that continuously overwrites the oldest entries. This circular replay buffer has been reproduced from scratch.
 
 How it works:
- * Circular Replay Buffer Structure: The replay buffer consist of a pointer that indicates where the latest frame should be inserted. When the buffer is full, the pointer loops back to the start, replacing the oldest frame with the new one.
+ * Circular Replay Buffer Structure: The replay buffer consists of a pointer that indicates where the latest frame should be inserted. When the buffer is full, the pointer loops back to the start, replacing the oldest frame with the new one.
  * Stored Information: For every saved frame, the corresponding action taken, reward received, and a done flag (indicating whether the game has ended) are also stored. This ensures that each frame is accompanied by all the necessary data to reconstruct a full experience.
  * Creating the transition: The transitions tuples $$(s, a, r, s’)$$ are created when sampling from the replay buffer. That is, we sample a random batch of indices from the buffer. Suppose one of those indices is i, which corresponds to selecting frame fi, action ai and reward ri. The transition is built:
       * $$s = [f_{i-4}, f_{i-3}, f_{i-2}, f_{i-1}]$$
