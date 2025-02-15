@@ -1,7 +1,7 @@
 import imageio
 import os
     
-def record_agent(agent, env, game, num_episode): 
+def record_agent(agent, env, game, num_episode, enable_starter_action, starter_action): 
     """
     Records a test run of the agent in a given environment and saves it as a GIF.
     """
@@ -20,8 +20,8 @@ def record_agent(agent, env, game, num_episode):
     while not done:
         frames.append(env.render())
 
-        if new_game or life_lost:
-            action = 1  # Force the first action to be 1 after life loss to ensure no infinite loop
+        if enable_starter_action and (new_game or life_lost):
+            action = starter_action  # Force the first action to be 1 after life loss to ensure no infinite loop
             new_game = False
             life_lost = False  
         else:

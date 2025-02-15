@@ -7,7 +7,7 @@ import yaml
 
 logger = logging.getLogger(__name__)
 
-def save_agent(agent, game, new_game, episode_score = [], num_frames = 0, num_episode = 0):
+def save_agent(agent, game, new_game, episode_score = [], eval_episode_score = {}, num_frames = 0, num_episode = 0):
     """
     Saves agent and its scores
     """
@@ -22,17 +22,17 @@ def save_agent(agent, game, new_game, episode_score = [], num_frames = 0, num_ep
         pickle.dump(agent, f)
     
     if new_game:
-        game_info = {"scores": [], "num_frames": 0}
+        game_info = {"scores": [], "eval_scores": {"num_episode": [], "score": []} ,"num_frames": 0}
     
     else: 
-        game_info = {"scores": episode_score, "num_frames": num_frames}
+        game_info = {"scores": episode_score, "eval_scores": eval_episode_score,"num_frames": num_frames}
              
     # Save agent's results
     with open(f"results/{game}/game/game_info_{num_episode}.pkl", "wb") as f:
         pickle.dump(game_info, f)
 
 
-def save_results(game, episode_score, num_episode):
+def save_results(game, episode_score, eval_episode_score, num_episode):
     
     """
     Saves graph of agent's performance
@@ -42,14 +42,20 @@ def save_results(game, episode_score, num_episode):
     if not os.path.exists(f"results/{game}/plots"):
         os.makedirs(f"results/{game}/plots/")
             
-    # Plot episode scores
+    # Plot episode scores for training
     plt.plot(np.arange(len(episode_score)), episode_score, linewidth=0.2)
     plt.title(f"Training Scores - {game} - Episode {num_episode}")
     plt.xlabel("Episode")
     plt.ylabel("Score")
-    
-    # Save the plot
     plt.savefig(f"results/{game}/plots/episode_scores_{num_episode}.png")
+    plt.close()  
+    
+    # Plot episode scores for evaluation
+    plt.plot(eval_episode_score["num_episode"], eval_episode_score["score"], linewidth=0.2)
+    plt.title(f"Evaluation Scores - {game} - Episode {num_episode}")
+    plt.xlabel("Episode")
+    plt.ylabel("Score")
+    plt.savefig(f"results/{game}/plots/eval_episode_scores_{num_episode}.png")
     plt.close()  
         
    
@@ -66,18 +72,19 @@ def load_agent(agent_path: str, game_info_path: str):
         logger.error(f"Agent save path {agent_path} does not exist!")
         raise FileNotFoundError(f"Agent save path {agent_path} does not exist!") from fnfe
     
-    # Load episode score
+    # Load agent details
     try:
         with open(game_info_path, "rb") as f:
             game_info = pickle.load(f)
             episode_score = game_info["scores"]
+            eval_episode_score = game_info["eval_scores"]
             num_frames = game_info["num_frames"]
             
     except FileNotFoundError as fnfe:
         logger.error(f"Episode score path {game_info_path} does not exist!")
         raise FileNotFoundError(f"Episode score path {game_info_path} does not exist!") from fnfe
         
-    return agent, episode_score, num_frames
+    return agent, episode_score, eval_episode_score, num_frames
 
 def load_config(config_path):
     """
