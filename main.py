@@ -139,7 +139,7 @@ if __name__ == "__main__":
     parser.add_argument("--update_freq_target", type=int, default=10000, help="Frequency of target network updates if hard update selected")
     parser.add_argument("--enable_starter_action", type=str, default="true", help="Whether to enable the starter action")
     parser.add_argument("--starter_action", type=int, default=1, help="The action to start with if starter action is enabled")
-    parser.add_argument("--save_root_folder", type=str, required="true", help="Root folder where all outputs (models, logs, recordings) will be saved")
+    parser.add_argument("--save_root_folder", type=str, required=True, help="Root folder where all outputs (models, logs, recordings) will be saved")
     
     # AWS parameters
     parser.add_argument("--train_on_aws", type=str, default="false", help="Option to train model on AWS, otherwise defaults to local machine")
