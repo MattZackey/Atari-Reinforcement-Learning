@@ -104,7 +104,7 @@ So it's possible to achieve the same performance as DeepMind in Atari! If you wa
   7. Run the training script `python main.py --game "BreakoutDeterministic-v4" --save_root_folder "results"`
 
 ## AWS SageMaker
-This project supports training the DQN agent on AWS SageMaker. To enable this, set train_on_aws=True and provide an S3 bucket name via the s3_bucket_name argument. The notebook aws-setup.ipynb contains the code to launch the SageMaker training job.
+This project supports training the DQN agent on AWS SageMaker. To enable this, set `train_on_aws=True` and provide an S3 bucket name via the `s3_bucket_name argument`. The notebook `aws-setup.ipynb` contains the code to launch the SageMaker training job.
 
 ## References
 
