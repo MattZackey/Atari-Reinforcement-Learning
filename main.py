@@ -8,7 +8,6 @@ from agents import AgentDQN
 from training import train_agent
 from envs import setup_atari_env
 from utils import load_agent, setup_logger, check_s3_bucket, create_s3_keys, str_to_bool, create_results_directories
-#from torch.utils.tensorboard import SummaryWriter
 
 def main(args):
     
@@ -42,9 +41,6 @@ def main(args):
             save_root_folder = args.save_root_folder,
             game_name = args.game
         )
-        
-    # if not train_on_aws:
-    #     writer = SummaryWriter() 
         
     # Setup environment
     env, action_dim, frame_height, frame_width = setup_atari_env(
@@ -82,7 +78,6 @@ def main(args):
         
     # Load an existing agent
     else:
-        # Load an existing agent
         agent, episode_score, eval_episode_score, num_frames = load_agent(
             agent_path = args.agent_load_path, 
             game_info_path = args.game_info_load_path
@@ -149,9 +144,6 @@ if __name__ == "__main__":
     # AWS parameters
     parser.add_argument("--train_on_aws", type=str, default="false", help="Option to train model on AWS, otherwise defaults to local machine")
     parser.add_argument("--s3_bucket_name", type=str, default="", help="S3 Bucket")
-    
-    # General 
-    #parser.add_argument("--use_tensorboard", type=bool, default=False, help="Use tensorboard to log training results")
     
     args = parser.parse_args()
 

@@ -2,7 +2,6 @@ import numpy as np
 import torch
 import logging
 from utils import save_agent, save_results, record_agent, eval_agent
-#from torch.utils.tensorboard import SummaryWriter
 
 logger = logging.getLogger(__name__)
 
@@ -134,21 +133,6 @@ def train_agent(agent, env, game_name: str, num_episodes: int, new_agent: bool, 
             )
             eval_episode_score["num_episode"].append(starting_episode + i_episode + 1)
             eval_episode_score["score"].append(avg_score)
-            # if not train_on_aws:
-            #     writer.add_scalar("Evaluation", avg_score, starting_episode + i_episode + 1)
-        
-        # Log some information
-        # if not train_on_aws:
-        #     writer.add_scalar("Return", total_reward, starting_episode + i_episode + 1)
-        #     writer.add_scalar("Episilon", agent.eps_threshold, num_frames) 
-        #     writer.add_scalar("Loss", current_loss, num_frames)     
-        #     total_grad_l2_norm = 0
-        #     for _, (name, weight_or_bias_parameters) in enumerate(agent.policy_net.named_parameters()):
-        #         grad_l2_norm = weight_or_bias_parameters.grad.data.norm(p=2).item()
-        #         writer.add_scalar(f'grad_norms/{name}', grad_l2_norm, num_frames)
-        #         total_grad_l2_norm += grad_l2_norm ** 2
-        #     total_grad_l2_norm = total_grad_l2_norm ** (1/2)
-        #     writer.add_scalar('grad_norms/total', grad_l2_norm, num_frames)
         
         # Print progress
         if ((i_episode + 1) % 100) == 0:

@@ -13,5 +13,4 @@ results/BreakoutDeterministic-v4/plots/*
 !results/BreakoutDeterministic-v4/gameplay/agent_13500.gif
 !results/BreakoutDeterministic-v4/plots/episode_scores_13500.png
 results/PongDeterministic-v4
-results/training.log
 runs
