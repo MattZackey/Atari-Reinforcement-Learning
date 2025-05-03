@@ -101,7 +101,10 @@ So it's possible to achieve the same performance as DeepMind in Atari! If you wa
   4. Create a Conda environment `conda create --name atari-rl python=3.10` and active environment `conda activate atari-rl`
   5. Install required dependencies `pip install -r requirements.txt`
   6. For Windows users you are also required to install `pip install gym[atari]`
-  7. Run the training script `python train.py --game "BreakoutDeterministic-v4"`
+  7. Run the training script `python main.py --game "BreakoutDeterministic-v4" --save_root_folder "results"
+
+## AWS SageMaker
+This project supports training the DQN agent on AWS SageMaker. To enable this, set train_on_aws=True and provide an S3 bucket name via the s3_bucket_name argument. The notebook aws-setup.ipynb contains the code to launch the SageMaker training job.
 
 ## References
 
