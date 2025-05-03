@@ -1,14 +1,11 @@
 import imageio
 import os
+import boto3
     
-def record_agent(agent, env, game, num_episode, enable_starter_action, starter_action): 
+def record_agent(agent, env, game, num_episode, enable_starter_action, starter_action, save_root_folder, train_on_aws ,s3_bucket_name): 
     """
     Records a test run of the agent in a given environment and saves it as a GIF.
     """
-    
-    # Create directory
-    if not os.path.exists(f"results/{game}/gameplay"):
-        os.makedirs(f"results/{game}/gameplay/")
     
     frames = []
     state, info = env.reset() 
@@ -38,4 +35,13 @@ def record_agent(agent, env, game, num_episode, enable_starter_action, starter_a
             num_lives = info['lives']
 
     env.close()
-    imageio.mimsave(f"results/{game}/gameplay/agent_{num_episode}.gif", frames, fps=30)
+    
+    if train_on_aws:
+        imageio.mimsave(f"/opt/ml/output/{game}/gameplay/agent.gif", frames, fps=30)
+        
+        # Write to ss
+        s3 = boto3.client('s3')
+        s3.upload_file(Filename = f"/opt/ml/output/{game}/gameplay/agent.gif", Bucket = s3_bucket_name, Key = f"{save_root_folder}/{game}/gameplay/agent_{num_episode}.gif")
+    
+    else:
+        imageio.mimsave(f"{save_root_folder}/{game}/gameplay/agent_{num_episode}.gif", frames, fps=30)

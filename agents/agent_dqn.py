@@ -14,14 +14,17 @@ class AgentDQN:
     """  
 
     def __init__(self, action_dim: int, n_frames: int, frame_height: int, frame_width: int, intial_exploration: float, final_exploration: float, final_exploration_frame: int, size_memory: int, batch_size: int, gamma: float, tau: float, learning_rate: float):
-
+                
         self.action_dim =  action_dim
         self.n_frames = n_frames
         frame_shape = [frame_height, frame_width]
 
-        self.policy_net = DQN(n_frames, action_dim, frame_shape)
-        self.target_net = DQN(n_frames, action_dim, frame_shape)
-        self.target_net.load_state_dict(self.policy_net.state_dict())
+        policy_net = DQN(n_frames, action_dim, frame_shape)
+        target_net = DQN(n_frames, action_dim, frame_shape)
+        target_net.load_state_dict(policy_net.state_dict())
+        self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+        self.policy_net = policy_net.to(self.device)
+        self.target_net = target_net.to(self.device)
 
         self.final_exploration =  final_exploration
         self.final_exploration_frame =  final_exploration_frame
@@ -52,6 +55,7 @@ class AgentDQN:
             state = np.array(state, dtype=np.float32)
             state = torch.tensor(state)
             state = state.unsqueeze(0)
+            state = state.to(self.device)
             with torch.no_grad():
                 action_ind = torch.argmax(self.policy_net(state)).item()
 
@@ -71,6 +75,7 @@ class AgentDQN:
         state = np.array(state, dtype=np.float32)
         state = torch.tensor(state)
         state = state.unsqueeze(0)
+        state = state.to(self.device)
         with torch.no_grad():
             action_ind = torch.argmax(self.policy_net(state)).item()
         
@@ -98,17 +103,22 @@ class AgentDQN:
         # Calculating state action values at current state
         action_batch = batch[1].reshape(self.batch_size, 1)
         action_batch = torch.from_numpy(action_batch)
+        action_batch = action_batch.to(self.device)
         states = batch[0][:,:self.n_frames,:,:]
         states = torch.from_numpy(states).to(torch.float32)
+        states = states.to(self.device)
         q_current = self.policy_net(states).gather(1, action_batch.to(torch.int64))
 
         # Compute state action values for new state
         next_states = batch[0][:,1:(self.n_frames+1),:,:]
         next_states = torch.from_numpy(next_states).to(torch.float32)
+        next_states = next_states.to(self.device)
         reward_batch = batch[2]
         reward_batch = torch.from_numpy(reward_batch)
+        reward_batch = reward_batch.to(self.device)
         done_batch = batch[3]
         done_batch = torch.from_numpy(done_batch)
+        done_batch = done_batch.to(self.device)
         
         # Compute DQN targets
         with torch.no_grad():
@@ -124,7 +134,7 @@ class AgentDQN:
         # Compute gradients
         loss.backward()
         
-        #Prevent vanishing gradients
+        # Prevent vanishing gradients
         nn.utils.clip_grad_norm_(self.policy_net.parameters(), 5)
 
         # Update parameters
