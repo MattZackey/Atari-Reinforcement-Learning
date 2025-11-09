@@ -2,7 +2,6 @@
 **/__pycache__/
 
 # Removing complete training results
-results
 results/BreakoutDeterministic-v4/agent/*
 results/BreakoutDeterministic-v4/game/*
 results/BreakoutDeterministic-v4/gameplay/*
