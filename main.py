@@ -128,12 +128,12 @@ if __name__ == "__main__":
     
     # Game Specific Hyperparameters and Arguments
     parser.add_argument("--game", type=str, required=True, help="The name of the game")
-    parser.add_argument("--num_episodes", type=int, default=5000, help="Number of episodes to run")
+    parser.add_argument("--num_episodes", type=int, default=20000, help="Number of episodes to run")
     parser.add_argument("--new_agent", type=str, default="true", help="Whether to initialize a new agent or load an existing one")
     parser.add_argument("--agent_load_path", type=str, default="", help="Path to load the agent model from")
     parser.add_argument("--game_info_load_path", type=str, default="", help="Path to load the game info from")
-    parser.add_argument("--save_frequency", type=int, default=2500, help="Frequency (in episodes) to save the model")
-    parser.add_argument("--record_frequency", type=int, default=500, help="Frequency (in episodes) to record the gameplay")
+    parser.add_argument("--save_frequency", type=int, default=5000, help="Frequency (in episodes) to save the model")
+    parser.add_argument("--record_frequency", type=int, default=1000, help="Frequency (in episodes) to record the gameplay")
     parser.add_argument("--evaluation_frequency", type=int, default=50, help="Frequency (in episodes) to run evaluation")
     parser.add_argument("--num_evaluation_runs", type=int, default=20, help="Number of evaluation runs per evaluation cycle")
     parser.add_argument("--update_freq_target", type=int, default=10000, help="Frequency of target network updates if hard update selected")
