@@ -49,7 +49,7 @@ def main(args):
     )
     
     # Initialize an agent
-    if args.new_agent:
+    if new_agent:
         
         # Agent Initialization
         agent = AgentDQN(
