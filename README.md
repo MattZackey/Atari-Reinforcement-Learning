@@ -1,21 +1,26 @@
 # Deep Q-Learning 🤖 
 
 ## Overview
-This repository implements the Deep Q-Network (DQN) algorithm within Atari 2600. Currently, the results for Breakout are available. The project aims to replicate some of the success achieved by DeepMind in their paper, [Human-level control through deep reinforcement learning](https://training.incf.org/sites/default/files/2023-05/Human-level%20control%20through%20deep%20reinforcement%20learning.pdf). In their work, DeepMind demonstrated that a DQN agent can learn successful policies directly from raw pixel inputs, achieving human-level performance on a variety of Atari games. This repository serves as an exploration of this breakthrough.
+This repository implements the Deep Q-Network (DQN) algorithm within Atari 2600. Currently, the results for Breakout and Pong are available. The project aims to replicate some of the success achieved by DeepMind in their paper, [Human-level control through deep reinforcement learning](https://training.incf.org/sites/default/files/2023-05/Human-level%20control%20through%20deep%20reinforcement%20learning.pdf). In their work, DeepMind demonstrated that a DQN agent can learn successful policies directly from raw pixel inputs, achieving human-level performance on a variety of Atari games. This repository serves as an exploration of this breakthrough.
 
-## Breakout 
+## Gameplay
 
-The trained DQN agent achieves a total score of 343. Although, this is not a perfect score, it still highlights a high-level of competence in the game. Notably, the agent has learned that creating a tunnel along both sides is the most efficient strategy for breaking as many bricks as possible. With this strategy, the agent decreases the number of times it must hit the ball, while maximising the number of collisions. Similarly, DeepMind found the same relationship in their training. Highlighting, that such a strategy emerges naturally in a sufficiently trained agent. <br>
+The Pong agent achieves a score of 21–6, and the Breakout agent reaches a total score of 343. Notably, the Breakout agent has learned that creating a tunnel along both sides is the most efficient strategy for breaking as many bricks as possible. With this strategy, the agent decreases the number of times it must hit the ball, while maximising the number of collisions. Similarly, DeepMind found the same relationship in their training. Highlighting, that such a strategy emerges naturally in a sufficiently trained agent. <br>
 <h3 align="center"><b>Results</b></h3>
 
 <p align="center">
-  <img src="results/BreakoutDeterministic-v4/gameplay/agent_13500.gif" width="400">
+  <img src="results/BreakoutDeterministic-v4/gameplay/agent_13500.gif" width="350" />
+  <img src="results/PongDeterministic-v4/gameplay/agent_2250.gif" width="350" />
 </p>
-<br>
 The total reward the agent achieved for each espisode of training.
 <br>
 <p align="center">
 <img src="results/BreakoutDeterministic-v4/plots/episode_scores_13500.png" width="800"/>
+</p>
+<br>
+<br>
+<p align="center">
+<img src="results/PongDeterministic-v4/plots/episode_scores_2250.png" width="800"/>
 </p>
 <br>
 
