@@ -1,0 +1,713 @@
+ERROR - Save frequency must be at least 1000.
+ERROR - Save frequency must be at least 1000.
+INFO - New Agent Initialized
+INFO - --------Configuration details--------
+INFO -    n_frames: 4
+INFO -    seed_value: 42
+INFO -    initial_exploration: 1.0
+INFO -    final_exploration: 0.1
+INFO -    final_exploration_frame: 1000000
+INFO -    size_memory: 1000
+INFO -    batch_size: 32
+INFO -    gamma: 0.99
+INFO -    tau: 0.005
+INFO -    learning_rate: 0.0001
+INFO -    game: BreakoutDeterministic-v4
+INFO -    num_episodes: 50
+INFO -    new_agent: true
+INFO -    agent_load_path: 
+INFO -    game_info_load_path: 
+INFO -    save_frequency: 50
+INFO -    record_frequency: 1000
+INFO -    evaluation_frequency: 50
+INFO -    num_evaluation_runs: 20
+INFO -    update_freq_target: 10000
+INFO -    enable_starter_action: true
+INFO -    starter_action: 1
+INFO -    save_root_folder: results
+INFO -    train_on_aws: false
+INFO -    s3_bucket_name: 
+INFO - -------------------------------------
+INFO - Starting training...
+INFO - Agent's memory has been initialized
+INFO - Agent's memory is now full with initial data.
+INFO - New Agent Initialized
+INFO - --------Configuration details--------
+INFO -    n_frames: 4
+INFO -    seed_value: 42
+INFO -    initial_exploration: 1.0
+INFO -    final_exploration: 0.1
+INFO -    final_exploration_frame: 1000000
+INFO -    size_memory: 1000
+INFO -    batch_size: 32
+INFO -    gamma: 0.99
+INFO -    tau: 0.005
+INFO -    learning_rate: 0.0001
+INFO -    game: BreakoutDeterministic-v4
+INFO -    num_episodes: 50
+INFO -    new_agent: true
+INFO -    agent_load_path: 
+INFO -    game_info_load_path: 
+INFO -    save_frequency: 50
+INFO -    record_frequency: 50
+INFO -    evaluation_frequency: 50
+INFO -    num_evaluation_runs: 20
+INFO -    update_freq_target: 10000
+INFO -    enable_starter_action: true
+INFO -    starter_action: 1
+INFO -    save_root_folder: results
+INFO -    train_on_aws: false
+INFO -    s3_bucket_name: 
+INFO - -------------------------------------
+INFO - Starting training...
+INFO - Agent's memory has been initialized
+INFO - Agent's memory is now full with initial data.
+INFO - Record agent performance
+INFO - Training completed.
+INFO - New Agent Initialized
+INFO - --------Configuration details--------
+INFO -    n_frames: 4
+INFO -    seed_value: 42
+INFO -    initial_exploration: 1.0
+INFO -    final_exploration: 0.1
+INFO -    final_exploration_frame: 1000000
+INFO -    size_memory: 1000
+INFO -    batch_size: 32
+INFO -    gamma: 0.99
+INFO -    tau: 0.005
+INFO -    learning_rate: 0.0001
+INFO -    game: BreakoutDeterministic-v4
+INFO -    num_episodes: 50
+INFO -    new_agent: true
+INFO -    agent_load_path: results\BreakoutDeterministic-v4\agent\agent_episode_50.pkl
+INFO -    game_info_load_path: results\BreakoutDeterministic-v4\game\game_info_50.pkl
+INFO -    save_frequency: 50
+INFO -    record_frequency: 50
+INFO -    evaluation_frequency: 50
+INFO -    num_evaluation_runs: 20
+INFO -    update_freq_target: 10000
+INFO -    enable_starter_action: true
+INFO -    starter_action: 1
+INFO -    save_root_folder: results
+INFO -    train_on_aws: false
+INFO -    s3_bucket_name: 
+INFO - -------------------------------------
+INFO - Starting training...
+INFO - Agent's memory has been initialized
+INFO - Agent's memory is now full with initial data.
+INFO - New Agent Initialized
+INFO - --------Configuration details--------
+INFO -    n_frames: 4
+INFO -    seed_value: 42
+INFO -    initial_exploration: 1.0
+INFO -    final_exploration: 0.1
+INFO -    final_exploration_frame: 1000000
+INFO -    size_memory: 1000
+INFO -    batch_size: 32
+INFO -    gamma: 0.99
+INFO -    tau: 0.005
+INFO -    learning_rate: 0.0001
+INFO -    game: BreakoutDeterministic-v4
+INFO -    num_episodes: 50
+INFO -    new_agent: false
+INFO -    agent_load_path: results\BreakoutDeterministic-v4\agent\agent_episode_50.pkl
+INFO -    game_info_load_path: results\BreakoutDeterministic-v4\game\game_info_50.pkl
+INFO -    save_frequency: 50
+INFO -    record_frequency: 50
+INFO -    evaluation_frequency: 50
+INFO -    num_evaluation_runs: 20
+INFO -    update_freq_target: 10000
+INFO -    enable_starter_action: true
+INFO -    starter_action: 1
+INFO -    save_root_folder: results
+INFO -    train_on_aws: false
+INFO -    s3_bucket_name: 
+INFO - -------------------------------------
+INFO - Starting training...
+INFO - Loaded agent from results\BreakoutDeterministic-v4\agent\agent_episode_50.pkl.
+INFO - Agent has already been trained for 50 episodes and 8057 frames.
+INFO - Starting training...
+INFO - Record agent performance
+INFO - Training completed.
+INFO - Loaded agent from results\PongDeterministic-v4\agent\agent_episode_1500.pkl.
+INFO - Agent has already been trained for 1500 episodes and 3611606 frames.
+INFO - Starting training...
+INFO - New Agent Initialized
+INFO - --------Configuration details--------
+INFO -    n_frames: 4
+INFO -    seed_value: 42
+INFO -    initial_exploration: 1.0
+INFO -    final_exploration: 0.1
+INFO -    final_exploration_frame: 1000000
+INFO -    size_memory: 1000000
+INFO -    batch_size: 32
+INFO -    gamma: 0.99
+INFO -    tau: 0.005
+INFO -    learning_rate: 0.0001
+INFO -    game: PongDeterministic-v4
+INFO -    num_episodes: 1500
+INFO -    new_agent: true
+INFO -    agent_load_path: 
+INFO -    game_info_load_path: 
+INFO -    save_frequency: 500
+INFO -    record_frequency: 250
+INFO -    evaluation_frequency: 50
+INFO -    num_evaluation_runs: 20
+INFO -    update_freq_target: 10000
+INFO -    enable_starter_action: true
+INFO -    starter_action: 1
+INFO -    save_root_folder: results
+INFO -    train_on_aws: false
+INFO -    s3_bucket_name: 
+INFO - -------------------------------------
+INFO - Starting training...
+INFO - Agent's memory has been initialized
+INFO - Agent memory progress: 1%
+INFO - Agent memory progress: 2%
+INFO - Agent memory progress: 3%
+INFO - Agent memory progress: 4%
+INFO - Agent memory progress: 5%
+INFO - Agent memory progress: 6%
+INFO - Agent memory progress: 7%
+INFO - Agent memory progress: 8%
+INFO - Agent memory progress: 9%
+INFO - Agent memory progress: 10%
+INFO - Agent memory progress: 11%
+INFO - Agent memory progress: 12%
+INFO - Agent memory progress: 13%
+INFO - Agent memory progress: 14%
+INFO - Agent memory progress: 15%
+INFO - Agent memory progress: 16%
+INFO - Agent memory progress: 17%
+INFO - Agent memory progress: 18%
+INFO - Agent memory progress: 19%
+INFO - Agent memory progress: 20%
+INFO - Agent memory progress: 21%
+INFO - Agent memory progress: 22%
+INFO - Agent memory progress: 23%
+INFO - Agent memory progress: 24%
+INFO - Agent memory progress: 25%
+INFO - Agent memory progress: 26%
+INFO - Agent memory progress: 27%
+INFO - Agent memory progress: 28%
+INFO - Agent memory progress: 28%
+INFO - Agent memory progress: 30%
+INFO - Agent memory progress: 31%
+INFO - Agent memory progress: 32%
+INFO - Agent memory progress: 33%
+INFO - Agent memory progress: 34%
+INFO - Agent memory progress: 35%
+INFO - Agent memory progress: 36%
+INFO - Agent memory progress: 37%
+INFO - Agent memory progress: 38%
+INFO - Agent memory progress: 39%
+INFO - Agent memory progress: 40%
+INFO - Agent memory progress: 41%
+INFO - Agent memory progress: 42%
+INFO - Agent memory progress: 43%
+INFO - Agent memory progress: 44%
+INFO - Agent memory progress: 45%
+INFO - Agent memory progress: 46%
+INFO - Agent memory progress: 47%
+INFO - Agent memory progress: 48%
+INFO - Agent memory progress: 49%
+INFO - Agent memory progress: 50%
+INFO - Agent memory progress: 51%
+INFO - Agent memory progress: 53%
+INFO - Agent memory progress: 54%
+INFO - Agent memory progress: 55%
+INFO - Agent memory progress: 56%
+INFO - Agent memory progress: 56%
+INFO - Agent memory progress: 57%
+INFO - Agent memory progress: 59%
+INFO - Agent memory progress: 60%
+INFO - Agent memory progress: 61%
+INFO - Agent memory progress: 62%
+INFO - Agent memory progress: 63%
+INFO - Agent memory progress: 64%
+INFO - Agent memory progress: 65%
+INFO - Agent memory progress: 66%
+INFO - Agent memory progress: 67%
+INFO - Agent memory progress: 68%
+INFO - Agent memory progress: 69%
+INFO - Agent memory progress: 70%
+INFO - Agent memory progress: 71%
+INFO - Agent memory progress: 72%
+INFO - Agent memory progress: 73%
+INFO - Agent memory progress: 74%
+INFO - Agent memory progress: 75%
+INFO - Agent memory progress: 76%
+INFO - Agent memory progress: 77%
+INFO - Agent memory progress: 78%
+INFO - Agent memory progress: 79%
+INFO - Agent memory progress: 80%
+INFO - Agent memory progress: 81%
+INFO - Agent memory progress: 82%
+INFO - Agent memory progress: 83%
+INFO - Agent memory progress: 84%
+INFO - Agent memory progress: 85%
+INFO - Agent memory progress: 86%
+INFO - Agent memory progress: 87%
+INFO - Agent memory progress: 88%
+INFO - Agent memory progress: 89%
+INFO - Agent memory progress: 90%
+INFO - Agent memory progress: 91%
+INFO - Agent memory progress: 92%
+INFO - Agent memory progress: 93%
+INFO - Agent memory progress: 94%
+INFO - Agent memory progress: 95%
+INFO - Agent memory progress: 96%
+INFO - Agent memory progress: 97%
+INFO - Agent memory progress: 98%
+INFO - Agent memory progress: 99%
+INFO - Agent memory progress: 100%
+INFO - Agent's memory is now full with initial data.
+INFO - Loaded agent from results\PongDeterministic-v4\agent\agent_episode_0.pkl.
+INFO - Agent has already been trained for 0 episodes and 0 frames.
+INFO - Starting training...
+INFO - Loaded agent from results\PongDeterministic-v4\agent\agent_episode_0.pkl.
+INFO - Agent has already been trained for 0 episodes and 0 frames.
+INFO - Starting training...
+INFO - Loaded agent from results\PongDeterministic-v4\agent\agent_episode_0.pkl.
+INFO - Agent has already been trained for 0 episodes and 0 frames.
+INFO - Starting training...
+INFO - Progress: 10%
+INFO - Number of frames: 90983
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 20%
+INFO - Number of frames: 183023
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Record agent performance
+INFO - Progress: 30%
+INFO - Number of frames: 279880
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 40%
+INFO - Number of frames: 382974
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 50%
+INFO - Number of frames: 496140
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Record agent performance
+INFO - Progress: 60%
+INFO - Number of frames: 655442
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 70%
+INFO - Number of frames: 881295
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Loaded agent from results\PongDeterministic-v4\agent\agent_episode_500.pkl.
+INFO - Agent has already been trained for 500 episodes and 496140 frames.
+INFO - Starting training...
+INFO - Loaded agent from results\PongDeterministic-v4\agent\agent_episode_500.pkl.
+INFO - Agent has already been trained for 500 episodes and 496140 frames.
+INFO - Starting training...
+INFO - Progress: 20%
+INFO - Number of frames: 644625
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 40%
+INFO - Number of frames: 854821
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Record agent performance
+INFO - Progress: 60%
+INFO - Number of frames: 1141220
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 80%
+INFO - Number of frames: 1472894
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 100%
+INFO - Number of frames: 1801609
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Record agent performance
+INFO - Training completed.
+INFO - Loaded agent from results\PongDeterministic-v4\agent\agent_episode_1000.pkl.
+INFO - Agent has already been trained for 1000 episodes and 1801609 frames.
+INFO - Starting training...
+INFO - Progress: 20%
+INFO - Number of frames: 2202259
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 40%
+INFO - Number of frames: 2665980
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Record agent performance
+INFO - Loaded agent from results\PongDeterministic-v4\agent\agent_episode_1000.pkl.
+INFO - Agent has already been trained for 1000 episodes and 1801609 frames.
+INFO - Starting training...
+INFO - Progress: 20%
+INFO - Number of frames: 2202259
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 40%
+INFO - Number of frames: 2665980
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Record agent performance
+INFO - Progress: 60%
+INFO - Number of frames: 3112829
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 80%
+INFO - Number of frames: 3435137
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 100%
+INFO - Number of frames: 3738728
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Record agent performance
+INFO - Training completed.
+INFO - Loaded agent from results\PongDeterministic-v4\agent\agent_episode_1500.pkl.
+INFO - Agent has already been trained for 1500 episodes and 3738728 frames.
+INFO - Starting training...
+INFO - Progress: 20%
+INFO - Number of frames: 4018493
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 40%
+INFO - Number of frames: 4287299
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Record agent performance
+INFO - Progress: 60%
+INFO - Number of frames: 4539839
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Loaded agent from results\PongDeterministic-v4\agent\agent_episode_1750.pkl.
+INFO - Agent has already been trained for 1750 episodes and 4411813 frames.
+INFO - Starting training...
+INFO - Progress: 20%
+INFO - Number of frames: 4673280
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 40%
+INFO - Number of frames: 4952153
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Record agent performance
+INFO - Progress: 60%
+INFO - Number of frames: 5231429
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 80%
+INFO - Number of frames: 5498718
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 100%
+INFO - Number of frames: 5772447
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Record agent performance
+INFO - Training completed.
+INFO - New Agent Initialized
+INFO - --------Configuration details--------
+INFO -    n_frames: 4
+INFO -    seed_value: 42
+INFO -    initial_exploration: 1.0
+INFO -    final_exploration: 0.1
+INFO -    final_exploration_frame: 1000000
+INFO -    size_memory: 1000000
+INFO -    batch_size: 32
+INFO -    gamma: 0.99
+INFO -    tau: 0.005
+INFO -    learning_rate: 0.0001
+INFO -    game: MsPacmanNoFrameskip-v4
+INFO -    num_episodes: 500
+INFO -    new_agent: true
+INFO -    agent_load_path: 
+INFO -    game_info_load_path: 
+INFO -    save_frequency: 500
+INFO -    record_frequency: 250
+INFO -    evaluation_frequency: 50
+INFO -    num_evaluation_runs: 20
+INFO -    update_freq_target: 10000
+INFO -    enable_starter_action: true
+INFO -    starter_action: 1
+INFO -    save_root_folder: results
+INFO -    train_on_aws: false
+INFO -    s3_bucket_name: 
+INFO - -------------------------------------
+INFO - Starting training...
+INFO - Agent's memory has been initialized
+INFO - Agent memory progress: 1%
+INFO - Agent memory progress: 2%
+INFO - Agent memory progress: 3%
+INFO - Agent memory progress: 4%
+INFO - Agent memory progress: 5%
+INFO - Agent memory progress: 6%
+INFO - Agent memory progress: 7%
+INFO - Agent memory progress: 8%
+INFO - Agent memory progress: 9%
+INFO - Agent memory progress: 10%
+INFO - Agent memory progress: 11%
+INFO - Agent memory progress: 12%
+INFO - Agent memory progress: 13%
+INFO - Agent memory progress: 14%
+INFO - Agent memory progress: 15%
+INFO - Agent memory progress: 16%
+INFO - Agent memory progress: 17%
+INFO - Agent memory progress: 18%
+INFO - Agent memory progress: 19%
+INFO - Agent memory progress: 20%
+INFO - Agent memory progress: 21%
+INFO - Agent memory progress: 22%
+INFO - Agent memory progress: 23%
+INFO - Agent memory progress: 24%
+INFO - Agent memory progress: 25%
+INFO - Agent memory progress: 26%
+INFO - Agent memory progress: 27%
+INFO - Agent memory progress: 28%
+INFO - Agent memory progress: 28%
+INFO - Agent memory progress: 30%
+INFO - Agent memory progress: 31%
+INFO - Agent memory progress: 32%
+INFO - Agent memory progress: 33%
+INFO - Agent memory progress: 34%
+INFO - Agent memory progress: 35%
+INFO - Agent memory progress: 36%
+INFO - Agent memory progress: 37%
+INFO - Agent memory progress: 38%
+INFO - Agent memory progress: 39%
+INFO - Agent memory progress: 40%
+INFO - Agent memory progress: 41%
+INFO - Agent memory progress: 42%
+INFO - Agent memory progress: 43%
+INFO - Agent memory progress: 44%
+INFO - Agent memory progress: 45%
+INFO - Agent memory progress: 46%
+INFO - Agent memory progress: 47%
+INFO - Agent memory progress: 48%
+INFO - Agent memory progress: 49%
+INFO - Agent memory progress: 50%
+INFO - Agent memory progress: 51%
+INFO - Agent memory progress: 52%
+INFO - Agent memory progress: 53%
+INFO - Agent memory progress: 54%
+INFO - Agent memory progress: 55%
+INFO - Agent memory progress: 56%
+INFO - Agent memory progress: 56%
+INFO - Agent memory progress: 57%
+INFO - Agent memory progress: 59%
+INFO - Agent memory progress: 60%
+INFO - Agent memory progress: 61%
+INFO - Agent memory progress: 62%
+INFO - Agent memory progress: 63%
+INFO - Agent memory progress: 64%
+INFO - Agent memory progress: 65%
+INFO - Agent memory progress: 66%
+INFO - Agent memory progress: 67%
+INFO - Agent memory progress: 68%
+INFO - Agent memory progress: 69%
+INFO - Agent memory progress: 70%
+INFO - Agent memory progress: 71%
+INFO - Agent memory progress: 72%
+INFO - Agent memory progress: 73%
+INFO - Agent memory progress: 74%
+INFO - Agent memory progress: 75%
+INFO - Agent memory progress: 76%
+INFO - Agent memory progress: 77%
+INFO - Agent memory progress: 78%
+INFO - Agent memory progress: 79%
+INFO - Agent memory progress: 80%
+INFO - Agent memory progress: 81%
+INFO - Agent memory progress: 82%
+INFO - Agent memory progress: 83%
+INFO - Agent memory progress: 84%
+INFO - Agent memory progress: 85%
+INFO - Agent memory progress: 86%
+INFO - Agent memory progress: 87%
+INFO - Agent memory progress: 88%
+INFO - Agent memory progress: 89%
+INFO - Agent memory progress: 90%
+INFO - Agent memory progress: 91%
+INFO - Agent memory progress: 92%
+INFO - Agent memory progress: 93%
+INFO - Agent memory progress: 94%
+INFO - Agent memory progress: 95%
+INFO - Agent memory progress: 96%
+INFO - Agent memory progress: 97%
+INFO - Agent memory progress: 98%
+INFO - Agent memory progress: 99%
+INFO - Agent memory progress: 100%
+INFO - Agent's memory is now full with initial data.
+INFO - Progress: 20%
+INFO - Number of frames: 197980
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 40%
+INFO - Number of frames: 392344
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Record agent performance
+INFO - Progress: 60%
+INFO - Number of frames: 603036
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+ERROR - Agent save path results\PMsPacmanNoFrameskip-v4\agent\agent_episode_500.pkl does not exist!
+INFO - New Agent Initialized
+INFO - --------Configuration details--------
+INFO -    n_frames: 4
+INFO -    seed_value: 42
+INFO -    initial_exploration: 1.0
+INFO -    final_exploration: 0.1
+INFO -    final_exploration_frame: 1000000
+INFO -    size_memory: 1000000
+INFO -    batch_size: 32
+INFO -    gamma: 0.99
+INFO -    tau: 0.005
+INFO -    learning_rate: 0.0001
+INFO -    game: MsPacmanNoFrameskip-v4
+INFO -    num_episodes: 500
+INFO -    new_agent: true
+INFO -    agent_load_path: 
+INFO -    game_info_load_path: 
+INFO -    save_frequency: 500
+INFO -    record_frequency: 250
+INFO -    evaluation_frequency: 50
+INFO -    num_evaluation_runs: 20
+INFO -    update_freq_target: 10000
+INFO -    enable_starter_action: true
+INFO -    starter_action: 1
+INFO -    save_root_folder: results
+INFO -    train_on_aws: false
+INFO -    s3_bucket_name: 
+INFO - -------------------------------------
+INFO - Starting training...
+INFO - Agent's memory has been initialized
+INFO - Agent memory progress: 1%
+INFO - Agent memory progress: 2%
+INFO - Agent memory progress: 3%
+INFO - Agent memory progress: 4%
+INFO - Agent memory progress: 5%
+INFO - Agent memory progress: 6%
+INFO - Agent memory progress: 7%
+INFO - Agent memory progress: 8%
+INFO - Agent memory progress: 9%
+INFO - Agent memory progress: 10%
+INFO - Agent memory progress: 11%
+INFO - Agent memory progress: 12%
+INFO - Agent memory progress: 13%
+INFO - Agent memory progress: 14%
+INFO - Agent memory progress: 15%
+INFO - Agent memory progress: 16%
+INFO - Agent memory progress: 17%
+INFO - Agent memory progress: 18%
+INFO - Agent memory progress: 19%
+INFO - Agent memory progress: 20%
+INFO - Agent memory progress: 21%
+INFO - Agent memory progress: 22%
+INFO - Agent memory progress: 23%
+INFO - Agent memory progress: 24%
+INFO - Agent memory progress: 25%
+INFO - Agent memory progress: 26%
+INFO - Agent memory progress: 27%
+INFO - Agent memory progress: 28%
+INFO - Agent memory progress: 28%
+INFO - Agent memory progress: 30%
+INFO - Agent memory progress: 31%
+INFO - Agent memory progress: 32%
+INFO - Agent memory progress: 33%
+INFO - Agent memory progress: 34%
+INFO - Agent memory progress: 35%
+INFO - Agent memory progress: 36%
+INFO - Agent memory progress: 37%
+INFO - Agent memory progress: 38%
+INFO - Agent memory progress: 39%
+INFO - Agent memory progress: 40%
+INFO - Agent memory progress: 41%
+INFO - Agent memory progress: 42%
+INFO - Agent memory progress: 43%
+INFO - Agent memory progress: 44%
+INFO - Agent memory progress: 45%
+INFO - Agent memory progress: 46%
+INFO - Agent memory progress: 47%
+INFO - Agent memory progress: 48%
+INFO - Agent memory progress: 49%
+INFO - Agent memory progress: 50%
+INFO - Agent memory progress: 51%
+INFO - Agent memory progress: 52%
+INFO - Agent memory progress: 53%
+INFO - Agent memory progress: 54%
+INFO - Agent memory progress: 55%
+INFO - Agent memory progress: 56%
+INFO - Agent memory progress: 56%
+INFO - Agent memory progress: 57%
+INFO - Agent memory progress: 59%
+INFO - Agent memory progress: 60%
+INFO - Agent memory progress: 61%
+INFO - Agent memory progress: 62%
+INFO - Agent memory progress: 63%
+INFO - Agent memory progress: 64%
+INFO - Agent memory progress: 65%
+INFO - Agent memory progress: 66%
+INFO - Agent memory progress: 67%
+INFO - Agent memory progress: 68%
+INFO - Agent memory progress: 69%
+INFO - Agent memory progress: 70%
+INFO - Agent memory progress: 71%
+INFO - Agent memory progress: 72%
+INFO - Agent memory progress: 73%
+INFO - Agent memory progress: 74%
+INFO - Agent memory progress: 75%
+INFO - Agent memory progress: 76%
+INFO - Agent memory progress: 77%
+INFO - Agent memory progress: 78%
+INFO - Agent memory progress: 79%
+INFO - Agent memory progress: 80%
+INFO - Agent memory progress: 81%
+INFO - Agent memory progress: 82%
+INFO - Agent memory progress: 83%
+INFO - Agent memory progress: 84%
+INFO - Agent memory progress: 85%
+INFO - Agent memory progress: 86%
+INFO - Agent memory progress: 87%
+INFO - Agent memory progress: 88%
+INFO - Agent memory progress: 89%
+INFO - Agent memory progress: 90%
+INFO - Agent memory progress: 91%
+INFO - Agent memory progress: 92%
+INFO - Agent memory progress: 93%
+INFO - Agent memory progress: 94%
+INFO - Agent memory progress: 95%
+INFO - Agent memory progress: 96%
+INFO - Agent memory progress: 97%
+INFO - Agent memory progress: 98%
+INFO - Agent memory progress: 99%
+INFO - Agent memory progress: 100%
+INFO - Agent's memory is now full with initial data.
+INFO - Progress: 20%
+INFO - Number of frames: 196820
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 40%
+INFO - Number of frames: 396584
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Record agent performance
+INFO - Progress: 60%
+INFO - Number of frames: 598228
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 80%
+INFO - Number of frames: 819440
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Progress: 100%
+INFO - Number of frames: 1058172
+INFO - Memory Allocated: 0.00 GB
+INFO - Memory Reserved: 0.00 GB
+INFO - Record agent performance
+INFO - Training completed.
+ERROR - Agent save path results\PMsPacmanNoFrameskip-v4\agent\agent_episode_500.pkl does not exist!
+ERROR - Agent save path results\PMsPacmanNoFrameskip-v4\agent\agent_episode_500.pkl does not exist!

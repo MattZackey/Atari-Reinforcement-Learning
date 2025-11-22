@@ -1,6 +1,7 @@
 import imageio
 import os
 import boto3
+import numpy as np
     
 def record_agent(agent, env, game, num_episode, enable_starter_action, starter_action, save_root_folder, train_on_aws ,s3_bucket_name): 
     """
@@ -22,7 +23,13 @@ def record_agent(agent, env, game, num_episode, enable_starter_action, starter_a
             new_game = False
             life_lost = False  
         else:
-            action = agent.target_policy(state)
+            sample = np.random.rand()
+            
+            if sample > 0.05:
+                action = agent.target_policy(state)
+                
+            else:    
+                action = np.random.randint(agent.action_dim)
 
         next_state, reward, terminated, truncated, info = env.step(action)
 
