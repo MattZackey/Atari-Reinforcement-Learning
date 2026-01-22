@@ -16,10 +16,10 @@ def main(args):
     train_on_aws = str_to_bool(args.train_on_aws)
     enable_starter_action = str_to_bool(args.enable_starter_action)
     
-    # if args.save_frequency < 1000:
+    if args.save_frequency < 1000:
         
-    #     logging.error("Save frequency must be at least 1000.")
-    #     sys.exit(1)  
+        logging.error("Save frequency must be at least 1000.")
+        sys.exit(1)  
         
     if train_on_aws: # Setup on S3
         
